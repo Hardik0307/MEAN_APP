@@ -1,12 +1,10 @@
 <div class="row justify-content-center">
     <div class="col-md-4 register-employee">
-      <!-- form card register -->
       <div class="card-body">
         <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="inputName">Name</label>
             <input class="form-control" type="text" formControlName="name">
-            <!-- error -->
             <div class="invalid-feedback" *ngIf="submitted && myForm.name.errors?.required">
               Name is required.
             </div>
@@ -15,7 +13,6 @@
           <div class="form-group">
             <label for="inputEmail3">Email</label>
             <input class="form-control" type="text" formControlName="email">
-            <!-- error -->
             <div class="invalid-feedback" *ngIf="submitted && myForm.email.errors?.required">
               Enter your email.
             </div>
@@ -32,7 +29,6 @@
               <option *ngFor="let employeeProfile of EmployeeProfile" value="{{employeeProfile}}">{{employeeProfile}}
               </option>
             </select>
-            <!-- error -->
             <div class="invalid-feedback" *ngIf="submitted && myForm.designation.errors?.required">
               Choose designation.
             </div>
@@ -41,7 +37,6 @@
           <div class="form-group">
             <label for="inputVerify3">Mobile No</label>
             <input class="form-control" type="text" formControlName="phoneNumber">
-            <!-- error -->
             <div class="invalid-feedback" *ngIf="submitted && myForm.phoneNumber.errors?.required">
               Enter your phone number.
             </div>
@@ -56,5 +51,5 @@
         </form>
   
       </div>
-    </div><!-- form card register -->
+    </div>
   </div>
