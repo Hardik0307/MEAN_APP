@@ -6,7 +6,7 @@ import { EmployeeEditComponent } from './components/employee-edit/employee-edit.
 import {HomeComponent} from './components/home/home.component';
 
 const routes: Routes = [
-  { path: 'home', component : HomeComponent },
+  { path: 'home', component:HomeComponent },
   { path: 'create-employee', component: EmployeeCreateComponent },
   { path: 'edit-employee/:id', component: EmployeeEditComponent },
   { path: 'employees-list', component: EmployeeListComponent }  
