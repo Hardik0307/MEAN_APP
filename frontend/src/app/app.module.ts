@@ -9,12 +9,16 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 import { ApiService } from './service/api.service';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselConfig } from 'ngx-bootstrap/carousel';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeCreateComponent,
     EmployeeEditComponent,
-    EmployeeListComponent
+    EmployeeListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +26,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     SlimLoadingBarModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule.forRoot()
   ],
-  providers: [ApiService],
+  providers: [ApiService,{ provide: CarouselConfig, useValue: { interval: 1500, noPause: true, showIndicators: true }}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
